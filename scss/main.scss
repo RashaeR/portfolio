@@ -1,5 +1,72 @@
-$primary-color: #444;
+@import "config";
 
-body {
-  background: $primary-color;
+body,
+html {
+  @include background();
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Raleway-semibold", "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 0.5em;
+  color: #666;
+}
+
+.bgText {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 3em;
+  font-weight: bold;
+
+  z-index: 1;
+  text-transform: uppercase;
+}
+.text-secondary {
+  color: $secondary-color;
+}
+
+.menu-nav {
+  background: $text-color;
+  color: #fff;
+  border-bottom: $secondary-color 2.5px solid;
+  ul {
+    list-style: none;
+    padding: 1.2em;
+    margin: 0;
+    margin-left: 6em;
+  }
+
+  li {
+    display: inline;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.7em;
+    padding-right: 1.2em;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+.menu-main {
+  .title-border {
+    border-bottom: $text-color 5px solid;
+    width: 5%;
+    margin-left: 47%;
+    position: relative;
+  }
+  h2 {
+    text-align: center;
+    font-size: 3em;
+    color: $text-color;
+    margin-bottom: 30px;
+  }
 }

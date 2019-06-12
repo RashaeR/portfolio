@@ -1,0 +1,33 @@
+$primary-color: #ccc;
+$secondary-color: #e31b6d;
+$show-home-image: true;
+$home-image: url(../img/image.jpg);
+$background-opacity: 0.4;
+$text-color: darken($primary-color, 50);
+@mixin background {
+  @if $show-home-image {
+    .bgImg {
+      background-image: $home-image;
+      min-height: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+
+      /*
+  fixed = parallax - scroll type
+  scroll = normal
+  */
+      background-attachment: fixed;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
+}
