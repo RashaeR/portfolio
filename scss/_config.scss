@@ -7,13 +7,13 @@ $text-color: darken($primary-color, 50);
 @mixin background {
   @if $show-home-image {
     .bgImg {
-      background-image: $home-image;
+      background: $home-image;
       min-height: 100%;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       position: relative;
-
+      height: 100%;
       /*
   fixed = parallax - scroll type
   scroll = normal
