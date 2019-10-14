@@ -40,7 +40,10 @@ html {
   font-weight: bold;
   line-height: 0.5em;
   z-index: 1;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  animation: head-text;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards; }
 
 .text-secondary {
   color: #e31b6d; }
@@ -65,6 +68,7 @@ html {
     font-size: 1.5em;
     padding-right: 1.2em; }
     .menu-nav a:hover {
+      transition: all 0.5s ease-out;
       color: #e31b6d; }
 
 .menu, .menu-contact {
@@ -75,10 +79,10 @@ html {
     margin: auto;
     position: relative; }
   .menu h2, .menu-contact h2 {
-    text-align: center;
     font-size: 3em;
     color: #4d4d4d;
-    margin-bottom: 30px; }
+    margin-bottom: 10px;
+    text-align: center; }
 
 .projects {
   display: grid;
