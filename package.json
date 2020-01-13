@@ -10,7 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "build": "npm run build: dist"
   },
   "author": "Rashae Redden",
   "license": "MIT"
